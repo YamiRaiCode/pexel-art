@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PexelArt</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./favicon-from-flaticon.png" type="image/x-icon">
+</head>
+<body>
+    <div>
+        <div class="options">
+            <div class="main-options">
+                <div id="columns-section">
+                    <label for="grid-columns-input">Grid Column Size</label>
+                    <input type="range" name="grid" id="grid-columns-input" max="90">
+                    <span id="column-value"></span>
+                </div>
+                <input type="color" name="color-selector" id="color-selector">
+
+                <div id="rows-section">
+                    <label for="grid-rows-input">Grid Row Size</label>
+                    <input type="range" name="grid" id="grid-rows-input" max="30">
+                    <span id="row-value"></span>
+                </div>
+            </div>
+            <div class="add-clear-buttons">
+                <button id="add-button" type="button">Add Grids</button>
+                <button id="clear-button" type="button">Clear</button>
+            </div>
+            
+            
+        
+        </div>
+        
+        <fieldset>
+            <legend id="grid-template">Unleash Your Creativity</legend>
+            <div id="grid-container">
+            </div>
+        </fieldset>
+        <div class="buttons">
+            <button type="button" id="draw-button">Draw</button>
+            <div class="draw-mode">* Drawing Mode *</div>
+            <button type="button" id="erase-button">Erase</button>
+        </div>
+        
+        
+    </div>
+    
+    <div class="created-by-me">Created By <a href="https://github.com/YamiRaiCode" target="_blank"> YamiRaiCode</a></div>
+    <script type="text/javascript" src="./script.js"></script>
+    
+</body>
+</html>
