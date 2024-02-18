@@ -14,7 +14,7 @@ A web application that allows you to create pixel art.
 * And More...
 
 ### 🍋 Getting Started
-To get started, simply visit the [PexelArt](https://yamiraicode.github.io/pexel-art/) site. You can then adjust your canvas's columns and rows size with help of range inputs. Then create a new canvas by clicking the "Add Grids" button. Once you have created a canvas, you can start adding pixels by clicking and dragging on it with your mouse. Clear your canvas with one click of the "Clear" button. Toggle between drawing and erasing with the drawing and eraser tools. 
+To get started, simply visit the [PexelArt](https://yamiraicode.github.io/pexel-art/) site. You can then adjust your canvas's columns and rows size with help of range inputs. Then create a new canvas by clicking the "Add Grids" button. Once you have created a canvas, you can start adding pixels by clicking and dragging on it with your mouse. Clear your canvas with one click of the "Clear" button. Toggle between drawing and erasing with the drawing and eraser buttons.
 
 ### 🍍 Technologies Used
 * HTML5
