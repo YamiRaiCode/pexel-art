@@ -1,5 +1,5 @@
+
 const gridContainer = document.getElementById('grid-container');
-const addButton = document.getElementById('add-button');
 const clearButton = document.getElementById('clear-button');
 const rows = document.getElementById('grid-rows-input');
 const columns = document.getElementById('grid-columns-input');
@@ -7,9 +7,10 @@ const columnSpan = document.getElementById('column-value');
 const rowSpan = document.getElementById('row-value')
 const colorInput = document.getElementById('color-selector');
 
-const drawButton = document.querySelector("#draw-button");
-const eraseButton = document.querySelector("#erase-button");
-const mode = document.querySelector(".draw-mode");
+const drawButton = document.querySelector('#draw-button');
+const eraseButton = document.querySelector('#erase-button');
+const mode = document.querySelector('.draw-mode');
+
 let gridsInTable;
 
 let color = colorInput.value;
@@ -21,29 +22,31 @@ let erasing = false;
 columnSpan.textContent = columns.value;
 rowSpan.textContent = rows.value;
 
-columns.addEventListener('input', function() {    
-    columnSpan.textContent = columns.value;
+columns.addEventListener('input', function(){
+    columnSpan.textContent=columns.value;
 });
-rows.addEventListener('input', function() {
-    // Değeri güncelle
-    rowSpan.textContent = rows.value;
+columns.addEventListener('mouseup', addingGrids);
+
+rows.addEventListener('input', function(){
+    rowSpan.textContent=rows.value;
 });
-colorInput.addEventListener("input", function(){
+rows.addEventListener('mouseup', addingGrids);
+
+colorInput.addEventListener('input', function(){
     color = colorInput.value;
 });
 
-addButton.addEventListener("click", addingGrids);
-clearButton.addEventListener("click", clear);
+clearButton.addEventListener('click', clear);
 
-drawButton.addEventListener("click", function(){
+drawButton.addEventListener('click', function(){
     drawing=true;
     erasing=false;
     mode.textContent="* Drawing Mode *";
 });
-eraseButton.addEventListener("click", function(){
+eraseButton.addEventListener('click', function(){
     drawing=false;
     erasing=true;
-    mode.textContent = "* Erasing Mode *"
+    mode.textContent = "* Erasing Mode *";
 });
 
 function addingGrids() {
@@ -92,12 +95,10 @@ function draw(){
             console.log("Top: " + gridTop);
             
             if (drawing === true) {
-                // Eğer çizim modundaysa yapılacak işlemler
                 if((mouseX >= gridLeft && mouseX <= gridLeft + gridWidth ) && (mouseY>= gridTop && mouseY<= gridTop+gridHeight)){
                     this.style.backgroundColor =color;
                 }
             } else if (erasing === true) {
-                // Eğer silme modundaysa yapılacak işlemler
                 if((mouseX >= gridLeft && mouseX <= gridLeft + gridWidth ) && (mouseY>= gridTop && mouseY<= gridTop+gridHeight)){
                     this.style.backgroundColor ="white";
                 }
@@ -118,19 +119,14 @@ function draw(){
             console.log("Top: " + gridTop);
             
             if (drawing === true) {
-                // Eğer çizim modundaysa yapılacak işlemler
                 if((mouseX >= gridLeft && mouseX <= gridLeft + gridWidth ) && (mouseY>= gridTop && mouseY<= gridTop+gridHeight)){
                     this.style.backgroundColor =color;
                 }
             } else if (erasing === true) {
-                // Eğer silme modundaysa yapılacak işlemler
                 if((mouseX >= gridLeft && mouseX <= gridLeft + gridWidth ) && (mouseY>= gridTop && mouseY<= gridTop+gridHeight)){
                     this.style.backgroundColor ="white";
                 }
             }
         });
-
-        
     }
-
 }
